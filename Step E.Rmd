@@ -1,0 +1,282 @@
+Violence rating
+```{r}
+library(readr)
+gameViolenceRating <- read_csv("~/Desktop/Game violence rating.csv")
+summary(gameViolenceRating)
+View(gameViolenceRating)
+```
+
+Age Distribution
+#The age we get is 6, 10, 12 years old. We collect the information about the games and participants. We only want to have the description about the violence scene and content.
+```{r} 
+library(readr)
+library(ggplot2)
+ageD <- read_csv("~/Desktop/Aggression level.csv")
+View(ageD)
+ggplot(ageD, aes(Age)) + geom_bar()
+```
+
+Information restriction (Data Cleaning)
+```{r}
+gameViolentRate = gameViolenceRating[c(1:300),c("GameTypes", "ViolenceScene", "ViolenceContent")]
+View(gameViolentRate)
+```
+
+Data combination for age 6 and game type 1
+```{r}
+library(dbplyr)
+age6 <- subset(ageD, ageD$Age == 6)
+gameViolentRate1 <- subset(gameViolentRate, gameViolentRate$GameTypes == 1)
+age6Aggression1 <- cbind(age6, gameViolentRate1)
+#View(age6Aggression1)
+```
+
+Data combination for age 6 and game type 2
+```{r}
+library(dbplyr)
+age6 <- subset(ageD, ageD$Age == 6)
+gameViolentRate2 <- subset(gameViolentRate, gameViolentRate$GameTypes == 2)
+age6Aggression2 <- cbind(age6, gameViolentRate2)
+#View(age6Aggression2)
+```
+
+Data combination for age 6 and game type 3
+```{r}
+library(dbplyr)
+age6 <- subset(ageD, ageD$Age == 6)
+gameViolentRate3 <- subset(gameViolentRate, gameViolentRate$GameTypes == 3)
+age6Aggression3 <- cbind(age6, gameViolentRate3)
+#View(age6Aggression3)
+```
+
+Data combination for age 6 and game type 4
+```{r}
+library(dbplyr)
+age6 <- subset(ageD, ageD$Age == 6)
+gameViolentRate4 <- subset(gameViolentRate, gameViolentRate$GameTypes == 4)
+age6Aggression4 <- cbind(age6, gameViolentRate4)
+#View(age6Aggression4)
+```
+
+Data combination for age 6 and game type 5
+```{r}
+library(dbplyr)
+age6 <- subset(ageD, ageD$Age == 6)
+gameViolentRate5 <- subset(gameViolentRate, gameViolentRate$GameTypes == 5)
+age6Aggression5 <- cbind(age6, gameViolentRate5)
+#View(age6Aggression5)
+```
+
+Data combination for age 10 and game type 1
+```{r}
+library(dbplyr)
+age10 <- subset(ageD, ageD$Age == 10)
+gameViolentRate1 <- subset(gameViolentRate, gameViolentRate$GameTypes == 1)
+age10Aggression1 <- cbind(age10, gameViolentRate1)
+#View(age10Aggression1)
+```
+
+Data combination for age 10 and game type 2
+```{r}
+library(dbplyr)
+age10 <- subset(ageD, ageD$Age == 10)
+gameViolentRate2 <- subset(gameViolentRate, gameViolentRate$GameTypes == 2)
+age10Aggression2 <- cbind(age10, gameViolentRate2)
+#View(age10Aggression2)
+```
+
+Data combination for age 10 and game type 3
+```{r}
+library(dbplyr)
+age10 <- subset(ageD, ageD$Age == 10)
+gameViolentRate3 <- subset(gameViolentRate, gameViolentRate$GameTypes == 3)
+age10Aggression3 <- cbind(age10, gameViolentRate3)
+#View(age10Aggression3)
+```
+
+Data combination for age 10 and game type 4
+```{r}
+library(dbplyr)
+age10 <- subset(ageD, ageD$Age == 10)
+gameViolentRate4 <- subset(gameViolentRate, gameViolentRate$GameTypes == 4)
+age10Aggression4 <- cbind(age10, gameViolentRate4)
+#View(age10Aggression4)
+```
+
+Data combination for age 10 and game type 5
+```{r}
+library(dbplyr)
+age10 <- subset(ageD, ageD$Age == 10)
+gameViolentRate5 <- subset(gameViolentRate, gameViolentRate$GameTypes == 5)
+age10Aggression5 <- cbind(age10, gameViolentRate5)
+#View(age10Aggression5)
+```
+
+Data combination for age 12 and game type 1
+```{r}
+library(dbplyr)
+age12 <- subset(ageD, ageD$Age == 12)
+gameViolentRate1 <- subset(gameViolentRate, gameViolentRate$GameTypes == 1)
+age12Aggression1 <- cbind(age12, gameViolentRate1)
+#View(age12Aggression1)
+```
+
+Data combination for age 12 and game type 2
+```{r}
+library(dbplyr)
+age12 <- subset(ageD, ageD$Age == 12)
+gameViolentRate2 <- subset(gameViolentRate, gameViolentRate$GameTypes == 2)
+age12Aggression2 <- cbind(age12, gameViolentRate2)
+#View(age12Aggression2)
+```
+
+Data combination for age 12 and game type 3
+```{r}
+library(dbplyr)
+age12 <- subset(ageD, ageD$Age == 12)
+gameViolentRate3 <- subset(gameViolentRate, gameViolentRate$GameTypes == 3)
+age12Aggression3 <- cbind(age12, gameViolentRate3)
+#View(age12Aggression3)
+```
+
+Data combination for age 12 and game type 4
+```{r}
+library(dbplyr)
+age12 <- subset(ageD, ageD$Age == 12)
+gameViolentRate4 <- subset(gameViolentRate, gameViolentRate$GameTypes == 4)
+age12Aggression4 <- cbind(age12, gameViolentRate4)
+View(age12Aggression4)
+```
+
+Data combination for age 12 and game type 5
+```{r}
+library(dbplyr)
+age12 <- subset(ageD, ageD$Age == 12)
+gameViolentRate5 <- subset(gameViolentRate, gameViolentRate$GameTypes == 5)
+age12Aggression5 <- cbind(age12, gameViolentRate5)
+#View(age12Aggression5)
+```
+
+correlation test for age 6 game type 1
+```{r}
+cor.test(age6Aggression1$ViolenceScene, age6Aggression1$AggressionLevel)
+```
+
+correlation test for age 6 game type 2
+```{r}
+cor.test(age6Aggression2$ViolenceScene, age6Aggression2$AggressionLevel)
+```
+
+correlation test for age 6 game type 3
+```{r}
+cor.test(age6Aggression3$ViolenceScene, age6Aggression3$AggressionLevel)
+```
+
+correlation test for age 6 game type 4
+```{r}
+cor.test(age6Aggression4$ViolenceScene, age6Aggression4$AggressionLevel)
+```
+
+correlation test for age 6 game type 5
+```{r}
+cor.test(age6Aggression5$ViolenceScene, age6Aggression5$AggressionLevel)
+```
+
+correlation test for age 10 game type 1
+```{r}
+cor.test(age10Aggression1$ViolenceScene, age10Aggression1$AggressionLevel)
+```
+
+correlation test for age 10 game type 2
+```{r}
+cor.test(age10Aggression2$ViolenceScene, age10Aggression2$AggressionLevel)
+```
+
+correlation test for age 10 game type 3
+```{r}
+cor.test(age10Aggression3$ViolenceScene, age10Aggression3$AggressionLevel)
+```
+
+correlation test for age 10 game type 4
+```{r}
+cor.test(age10Aggression4$ViolenceScene, age10Aggression4$AggressionLevel)
+```
+
+correlation test for age 10 game type 5
+```{r}
+cor.test(age6Aggression5$ViolenceScene, age6Aggression5$AggressionLevel)
+```
+
+correlation test for age 12 game type 1
+```{r}
+cor.test(age12Aggression1$ViolenceScene, age12Aggression1$AggressionLevel)
+```
+
+correlation test for age 12 game type 2
+```{r}
+cor.test(age12Aggression2$ViolenceScene, age12Aggression2$AggressionLevel)
+```
+
+correlation test for age 12 game type 3
+```{r}
+cor.test(age12Aggression3$ViolenceScene, age12Aggression3$AggressionLevel)
+```
+
+correlation test for age 12 game type 4
+```{r}
+cor.test(age12Aggression4$ViolenceScene, age12Aggression4$AggressionLevel)
+```
+
+correlation test for age 12 game type 5
+```{r}
+cor.test(age12Aggression5$ViolenceScene, age12Aggression5$AggressionLevel)
+```
+
+```{r}
+cor.test(gameViolenceRating$Familiarity, gameViolenceRating$Pleasure)
+```
+
+Assemble of correlation test for gameViolenceRating
+```{r}
+install.packages("corrplot")
+library(corrplot)
+M = cor(gameViolenceRating)
+corrplot(M, method = "number")
+```
+
+Assemble of correlation test for gameViolentRate
+```{r}
+install.packages("corrplot")
+library(corrplot)
+N = cor(gameViolentRate)
+corrplot(N, method = "number")
+```
+
+Correlation between violence content and games types
+```{r}
+cor.test(gameViolentRate$ViolenceContent, gameViolentRate$GameTypes)
+```
+
+Correlation between violence scene and game types
+```{r}
+cor.test(gameViolentRate$ViolenceScene, gameViolentRate$GameTypes)
+```
+
+
+
+
+The amount of Violence Scene in each game types
+```{r}
+library(ggplot2)
+ggplot(gameViolentRate, aes(x=GameTypes, y=ViolenceScene))+geom_bar(stat='identity')+theme_classic()
+```
+
+
+
+
+
+
+
+
+
+
